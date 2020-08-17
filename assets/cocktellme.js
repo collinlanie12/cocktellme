@@ -7,6 +7,7 @@ $.ajax({
   }).then(function(response) {
     //console.log(cocktailURL);
     console.log(response);
+    // something new!!!!
 
     $('.uk-button').on("click", function(){
       window.location='./questions.html';
@@ -21,3 +22,4 @@ $.ajax({
       //$(".uk-slider-items").append(newLi);
     }
   });
+  // please work
