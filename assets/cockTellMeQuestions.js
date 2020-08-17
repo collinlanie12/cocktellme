@@ -1,4 +1,9 @@
 var queryURL = "https://api.traitify.com/v1/assessments"
+
+$('#questionBtn').on("click", function () {
+    window.location = './questions.html';
+});
+
 $.ajax({
     url: queryURL,
     beforeSend: function (xhr) {
