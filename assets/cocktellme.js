@@ -40,7 +40,8 @@ $('#google-button').on('click', function () {
 
 $('#submit').on('click', function () {
   if ($("Email").val() === "" || $("#Password").val() === "") {
-    alert("Please insert your Email & Password to take the quiz.")
+    // alert("Please insert your Email & Password to take the quiz.")
+    $('#pw').append("<h3>" + "You must enter a valid email and password" + "</h3>")
   } else {
     window.location = './newuser.html';
   }
