@@ -9,7 +9,7 @@ $('#questionBtn').on("click", function () {
 
 var lastTest = localStorage.getItem("Test_ID");
 if (lastTest) {
-    renderQuiz(lastTest)
+    renderQuiz(lastTest);
 } else {
     $.ajax({
         url: queryURL,
@@ -33,7 +33,22 @@ function renderQuiz(testID) {
     assessment.assessmentID(testID);
     assessment.target(".traitify");
     assessment.render();
+    console.log(assessment.render());
+    // if (assessment.render(Promise.[[PromiseValue]].state.assessment.status) === "completed") {
+    //     $(".uk-hidden").removeClass(".uk-hidden");
+    // }
 }
 
+var queryResults = "https://api.traitify.com/v1/assessments/" + lastTest + "?data=blend,types,traits,career_matches"
+$.ajax({
+    url: queryResults,
+    beforeSend: function (xhr) {
+        xhr.setRequestHeader("Authorization", "Basic " + btoa("17330cfb2aff43ce8e99dd4889736e0b:x"));
+    },
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+})
+    .then(function (response) {
 
-
+    });

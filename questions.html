@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="vh1_AawFGaz0atGsVnI-nhBz87L5X-ibUxoSZmj7cLE" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link rel = "stylesheet"  type = "text/css" href = "assets/cocktellme.css">
+    <link rel="stylesheet" type="text/css" href="assets/cocktellme.css">
     <title>CockTellMe</title>
 </head>
-<body>
-  <header>
-    <div>
-        <div class="uk-background-muted uk-padding uk-panel">
-            <h1 class="uk-heading-Medium">Personality Assessment <i class="fas fa-cocktail fa-1x"></i></h1>
 
+<body>
+    <header>
+        <div>
+            <div class="uk-background-muted uk-padding uk-panel">
+                <h1 class="uk-heading-Medium">Personality Assessment <i class="fas fa-cocktail fa-1x"></i></h1>
+
+            </div>
+            <div class="uk-hidden">
+                <button id="resultsBtn" class="uk-button" type="button">Your Cocktail!</button>
+            </div>
         </div>
+    </header>
+    <div class="uk-container">
+        <div class="traitify"></div>
     </div>
-</header>
-<div class = "uk-container">
-    <div class="traitify"></div>
-  </div>
 
     <script src="https://cdn.traitify.com/js/v2/traitify.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
