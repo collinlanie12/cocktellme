@@ -7,6 +7,7 @@ $('#questionBtn').on("click", function () {
     window.location = './questions.html';
 });
 
+
 var lastTest = localStorage.getItem("Test_ID");
 if (lastTest) {
     renderQuiz(lastTest)
