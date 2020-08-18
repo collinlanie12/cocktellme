@@ -12,9 +12,11 @@ $.ajax({
   for (var i = 0; i < response.drinks.length; i++) {
     var newLi = $("<li>");
     var newImg = $("<img>");
+    var newDiv = $("<div>").attr("class", "uk-position-center uk-panel");
     newImg.attr("src", response.drinks[i].strDrinkThumb);
+    newLi.append(newDiv);
     newLi.append(newImg);
-    $(".uk-slider-items").append(newLi);
+    $("#sliderUL").append(newLi);
   }
 });
 
@@ -37,6 +39,10 @@ $('#google-button').on('click', function () {
 })
 
 $('#submit').on('click', function () {
-  window.location = './newuser.html';
+  if ($("Email").val() === "" || $("#Password").val() === "") {
+    alert("Please insert your Email & Password to take the quiz.")
+  } else {
+    window.location = './newuser.html';
+  }
 })
 
