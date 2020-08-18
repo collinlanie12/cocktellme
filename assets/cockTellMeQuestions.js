@@ -9,7 +9,7 @@ $('#questionBtn').on("click", function () {
 
 var lastTest = localStorage.getItem("Test_ID");
 if (lastTest) {
-    renderQuiz(lastTest);
+    renderQuiz("ddb69c62-70bc-4406-af2f-aeb47f329ea5");
 } else {
     $.ajax({
         url: queryURL,
@@ -32,14 +32,10 @@ function renderQuiz(testID) {
     console.log(testID)
     assessment.assessmentID(testID);
     assessment.target(".traitify");
-    assessment.render();
-    console.log(assessment.render());
-    // if (assessment.render(Promise.[[PromiseValue]].state.assessment.status) === "completed") {
-    //     $(".uk-hidden").removeClass(".uk-hidden");
-    // }
+    assessment.render()
 }
 
-var queryResults = "https://api.traitify.com/v1/assessments/" + lastTest + "?data=blend,types,traits,career_matches"
+var queryResults = "https://api.traitify.com/v1/assessments/" + "ddb69c62-70bc-4406-af2f-aeb47f329ea5" + "?data=blend,types,traits,career_matches"
 $.ajax({
     url: queryResults,
     beforeSend: function (xhr) {
@@ -50,5 +46,16 @@ $.ajax({
     contentType: 'application/json',
 })
     .then(function (response) {
-
+        console.log(response);
+        if (response.status === "complete") {
+            console.log(response.status);
+            $("#resultsBtn").removeClass("uk-hidden").css({
+                "margin-left": "450px",
+                "background": "#B0BEC5"
+            });
+        }
     });
+
+$("#resultsBtn").on('click', function () {
+    window.location = "./results.html";
+})
