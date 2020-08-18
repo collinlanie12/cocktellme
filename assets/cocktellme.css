@@ -10,7 +10,6 @@ body{
 }
 
 h1{
-<<<<<<< HEAD
     font-family: 'Fjalla One', sans-serif;
     /* background: url(../assets/concrete-texture.png); */
     background: #B0BEC5;
@@ -19,9 +18,6 @@ h1{
 .uk-button{
     background: #B0BEC5;
     color:white
-=======
-    font-family: 'Bentham', serif;
->>>>>>> 852e2ee74650df11679308cfa6eef657b3112adc
 }
 header{
     margin-bottom:30px;
