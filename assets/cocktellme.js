@@ -36,6 +36,9 @@ $('#google-button').on('click', function() {
 })
 
 $('#submit').on('click', function() {
-  window.location = './newuser.html';
+  if($("Email").val() === "" || $("#Password").val() === "" ){
+    alert("Please insert your Email & Password to take the quiz.")
+  } else {
+  window.location = './newuser.html';}
 })
 
