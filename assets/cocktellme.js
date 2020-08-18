@@ -10,9 +10,12 @@ $.ajax({
 
   //$("#new-img").attr("src", response.drinks[1].strDrinkThumb);
   for (var i = 0; i < response.drinks.length; i++) {
-    var newLi = $("<li>");
+    var newLi = $("<li>").attr("class", "uk-width-1-5 uk-transition-toggle");
     var newImg = $("<img>");
-    var newDiv = $("<div>").attr("class", "uk-position-center uk-panel");
+    var newH1 = $("<h5>").attr("class", "uk-margin-remove").css({ "color": "white" });
+    newH1.text(response.drinks[i].strDrink);
+    var newDiv = $("<div>").attr("class", "uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom");
+    newDiv.append(newH1);
     newImg.attr("src", response.drinks[i].strDrinkThumb);
     newLi.append(newDiv);
     newLi.append(newImg);
