@@ -17,4 +17,25 @@ $.ajax({
   }
 });
 
+$('#google-button').on('click', function() {
+  // Initialize with your OAuth.io app public key
+  OAuth.initialize('SwtCfntFYnWRa2E5jhP30wnVEG8');
+  // Use popup for OAuth
+  OAuth.popup('google').then(google => {
+    console.log(google);
+    // Retrieves user data from oauth provider
+   console.log(google.me());
+
+   if(google.provider === "google"){
+    console.log(google.provider)
+     window.location = './newuser.html';
+   }
+
+  });
+  
+})
+
+$('#submit').on('click', function() {
+  window.location = './newuser.html';
+})
 
