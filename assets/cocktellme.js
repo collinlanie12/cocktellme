@@ -12,13 +12,15 @@ $.ajax({
   for (var i = 0; i < response.drinks.length; i++) {
     var newLi = $("<li>").attr("class", "uk-width-1-5 uk-transition-toggle");
     var newImg = $("<img>");
-    var newH1 = $("<h5>").attr("class", "uk-margin-remove").css({ "color": "white" });
-    newH1.text(response.drinks[i].strDrink);
+    var newH5 = $("<h5>").attr("class", "uk-margin-remove").css({ "color": "white" });
+    newH5.text(response.drinks[i].strDrink);
+    var newDivPanel = $("<div>").attr("class", "uk-panel");
     var newDiv = $("<div>").attr("class", "uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom");
-    newDiv.append(newH1);
+    newDivPanel.append(newDiv);
+    newDiv.append(newH5);
     newImg.attr("src", response.drinks[i].strDrinkThumb);
-    newLi.append(newDiv);
-    newLi.append(newImg);
+    newDivPanel.append(newImg);
+    newLi.append(newDivPanel);
     $("#sliderUL").append(newLi);
   }
 });
