@@ -16,11 +16,24 @@ $.ajax({
     data: '{ "deck_id": "career-deck" }',
 })
     .then(function (response) {
-        console.log(response);
+        //console.log(response);
+        //console.log(test_ID);
         Traitify.setHost("https://api.traitify.com");
         Traitify.setPublicKey("00ab5e14b27740a08449fdf7ca441885");
         assessment = Traitify.ui.component();
-        assessment.assessmentID(response.id);
+        var lastTest = localStorage.getItem("Test_ID");
+        console.log(lastTest)
+        var setTest = localStorage.setItem("Test_ID", response.id);
+        if (lastTest !== "null") {
+            assessment.assessmentID(lastTest);
+        } else {
+            var setTest = assessment.assessmentID(response.id);
+            console.log(setTest);
+            localStorage.setItem("Test_ID", JSON.stringify(setTest.id))
+        }
         assessment.target(".traitify");
         assessment.render();
     });
+    
+
+    // b196e696-a52a-41dd-a843-03138ed1401c

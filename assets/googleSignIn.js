@@ -7,6 +7,6 @@
     OAuth.popup('google').then(google => {
       console.log(google);
       // Retrieves user data from oauth provider
-      console.log(google.me());
+     console.log(google.me());
     });
   })
