@@ -1,7 +1,38 @@
-h1{
-    font-family: 'Bentham', serif;
+.head{
+    font-family: 'Sigmar One', cursive;;
 }
-header{
-    margin-bottom:40px;
+body{
+    font-family: 'Overpass', sans-serif;
+}
+.background-image{
+    background: url(../assets/concrete-texture.png); 
+   height: 100vh;
 }
 
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    /* background: url(../assets/concrete-texture.png); */
+    background: #B0BEC5;
+    color:white;
+}
+.uk-button{
+    background: #B0BEC5;
+    color:white
+}
+header{
+    margin-bottom:30px;
+}
+.apptext{
+font-size:18px;
+margin-left: 10px;;
+}
+.form , .apptext{
+margin-top:10px;
+}
+h2{
+    margin-top: 10px;
+   
+}
+.form{
+    margin-right:10px;
+}
