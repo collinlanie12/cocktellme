@@ -89,7 +89,7 @@ function vodka() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -114,7 +114,7 @@ function spicedRum() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -138,7 +138,7 @@ function whiskey() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -163,7 +163,7 @@ function tequila() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -188,7 +188,7 @@ function scotch() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -213,7 +213,7 @@ function lager() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
@@ -238,7 +238,7 @@ function cognac() {
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
-      $(".uk-slider-items").append(resultsLi);
+      $("#slider_ul").append(resultsLi);
     }
   });
 }
