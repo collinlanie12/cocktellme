@@ -13,7 +13,6 @@ $.ajax({
   url: cocktailURL,
   method: "GET"
 }).then(function (response) {
-  console.log(response);
 
   for (var i = 0; i < response.drinks.length; i++) {
     var newLi = $("<li>").attr("class", "uk-width-1-5 uk-transition-toggle");
@@ -51,12 +50,20 @@ $('#google-button').on('click', function () {
 
 $('#submit').on('click', function () {
   if ($("Email").val() === "" || $("#Password").val() === "") {
-    // alert("Please insert your Email & Password to take the quiz.")
-    $('#pw').append("<h3>" + "You must enter a valid email and password" + "</h3>")
+    var newH3 = $("<h3>").text("You must enter a valid email and password").css({ "color": "red" });
+    $('#pw').append(newH3);
   } else {
     window.location = './newuser.html';
   }
-})
+});
+
+function resultBtn() {
+  $("#resultsBtn").removeClass("uk-hidden").css({
+    "margin-left": "1132px",
+    "background": "red",
+    "font-weight": "1000px"
+  })
+}
 
 function vodka() {
   var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drinkVod;
@@ -65,13 +72,11 @@ function vodka() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -90,13 +95,11 @@ function spicedRum() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -114,18 +117,15 @@ function whiskey() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
       var newH3 = $("<p>").text(response.drinks[i].strDrink).css({ "color": "black" });
-      //newH3.attr("class", "uk-card-title");
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
@@ -140,13 +140,11 @@ function tequila() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -165,13 +163,11 @@ function scotch() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -190,13 +186,11 @@ function lager() {
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -211,17 +205,14 @@ function lager() {
 function cognac() {
   var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drinkCognac;
   $.ajax({
-
     url: cocktailURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
     for (var i = 0; i < response.drinks.length; i++) {
       var resultsLi = $("<li>")
       var divCard = $("<div>").attr("class", "uk-card uk-card-default");
       var caroDiv = $("<div>").attr("class", "uk-card-media-top");
       var newImg = $("<img>").attr("src", response.drinks[i].strDrinkThumb);
-      console.log(newImg);
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
@@ -246,8 +237,6 @@ $.ajax({
   contentType: 'application/json',
 })
   .then(function (response) {
-    console.log(response);
-    console.log(response.personality_blend.personality_type_1.name);
     if (response.personality_blend.personality_type_1.name === "Action-Taker") {
       whiskey();
       $("#yourPersonalityCocktail").text("You are described as an Action-Taker. Action-Takers are hands-on doers! You excel at solitary, goal-oriented work and ‘getting the job done’. You’re also known for being handy, practical, applied, and ‘down to earth’.  The assessment has matched you with cocktails that contain " + drinkWhiskey + "!");

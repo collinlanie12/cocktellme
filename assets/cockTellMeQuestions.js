@@ -31,12 +31,10 @@ if (lastTest) {
 }
 function renderQuiz(testID) {
     assessment = Traitify.ui.component();
-    console.log(testID)
     assessment.assessmentID(testID);
     assessment.target(".traitify");
     assessment.render()
     assessment.on("Results.Initialized", function () {
-        console.log("Results.Initialized");
         $("#resultsBtn").removeClass("uk-hidden").css({
             "margin-left": "1132px",
             "background": "red",

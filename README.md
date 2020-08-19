@@ -7,10 +7,10 @@
 > <ins>SO THAT</ins> I know what to order at a restaurant or bar
 
 ## Task To Be Completed:
-- [ ] Will be working on the layout and design. Will be implementing ID’s for team Back-End to call upon and grab values/text.
-- [ ] Adding script tags and new framework that will be used other than Bootstrap. (UIKit chosen for new framework)
-- [ ] Will be researching the API’s that will be used and adding functionality to web-page. 
-- [ ] Also will be setting the drinks of the cocktaildb api to the user based on the results from the personality test.
+- [x] Will be working on the layout and design. Will be implementing ID’s for team Back-End to call upon and grab values/text.
+- [x] Adding script tags and new framework that will be used other than Bootstrap. (UIKit chosen for new framework)
+- [x] Will be researching the API’s that will be used and adding functionality to web-page. 
+- [x] Also will be setting the drinks of the cocktaildb api to the user based on the results from the personality test.
 
 ## Framework Used:
 * UIKit [UIkit Link](https://getuikit.com/)
@@ -22,7 +22,7 @@
 * Oauth [Oauth Link](https://docs.oauth.io/)
 
 ## Link to Website:
-[CocktellMe Wbesite!](https://oksimone.github.io/cocktellme/)
+[CocktellMe Website!](https://oksimone.github.io/cocktellme/)
 
 ## Demo:
 ![Alt text for image](https://github.com/[githubusername]/[name-of-repo]/blob/master/[folder-name-of-images]/[name-of-pic (ex. something.png)])
