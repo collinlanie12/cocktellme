@@ -1,14 +1,13 @@
-//cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
 cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka"
+
 $.ajax({
 
   url: cocktailURL,
   method: "GET"
 }).then(function (response) {
-  //console.log(cocktailURL);
   console.log(response);
 
-  //$("#new-img").attr("src", response.drinks[1].strDrinkThumb);
   for (var i = 0; i < response.drinks.length; i++) {
     var newLi = $("<li>").attr("class", "uk-width-1-5 uk-transition-toggle");
     var newImg = $("<img>");
