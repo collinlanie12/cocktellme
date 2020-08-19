@@ -124,7 +124,8 @@ function whiskey() {
       caroDiv.append(newImg);
       divCard.append(caroDiv);
       var divCardBody = $("<div>").attr("class", "uk-card-body");
-      var newH3 = $("<h3>").text(response.drinks[i].strDrink).css({ "color": "black" });
+      var newH3 = $("<p>").text(response.drinks[i].strDrink).css({ "color": "black" });
+      //newH3.attr("class", "uk-card-title");
       divCardBody.append(newH3);
       divCard.append(divCardBody);
       resultsLi.append(divCard);
