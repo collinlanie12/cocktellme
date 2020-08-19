@@ -10,12 +10,17 @@ $.ajax({
 
   //$("#new-img").attr("src", response.drinks[1].strDrinkThumb);
   for (var i = 0; i < response.drinks.length; i++) {
-    var newLi = $("<li>");
+    var newLi = $("<li>").attr("class", "uk-width-1-5 uk-transition-toggle");
     var newImg = $("<img>");
-    var newDiv = $("<div>").attr("class", "uk-position-center uk-panel");
+    var newH5 = $("<h5>").attr("class", "uk-margin-remove").css({ "color": "white" });
+    newH5.text(response.drinks[i].strDrink);
+    var newDivPanel = $("<div>").attr("class", "uk-panel");
+    var newDiv = $("<div>").attr("class", "uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom");
+    newDivPanel.append(newDiv);
+    newDiv.append(newH5);
     newImg.attr("src", response.drinks[i].strDrinkThumb);
-    newLi.append(newDiv);
-    newLi.append(newImg);
+    newDivPanel.append(newImg);
+    newLi.append(newDivPanel);
     $("#sliderUL").append(newLi);
   }
 });
