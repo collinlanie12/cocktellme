@@ -1,5 +1,5 @@
-//cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
-cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list"
+cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+// cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?g=Alcholic"
 $.ajax({
 
   url: cocktailURL,
