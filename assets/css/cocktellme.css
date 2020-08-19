@@ -5,13 +5,13 @@ body{
     font-family: 'Overpass', sans-serif;
 }
 .background-image{
-    background: url(../assets/concrete-texture.png); 
+    background: url(../images/concrete-texture.png); 
    height: 100vh;
 }
 
 h1{
     font-family: 'Fjalla One', sans-serif;
-    /* background: url(../assets/concrete-texture.png); */
+    /* background: url(../assets/images/concrete-texture.png); */
     background:  #B0BEC5;
     
     color:white;
