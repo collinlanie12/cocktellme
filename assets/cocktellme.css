@@ -43,3 +43,7 @@ h2{
 .results-text{
     margin-right: 20px;
 }
+
+.search {
+    width: 200px;
+}

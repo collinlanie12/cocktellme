@@ -35,7 +35,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -60,7 +60,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -84,7 +84,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -109,7 +109,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -134,7 +134,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -159,7 +159,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -184,7 +184,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -209,7 +209,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -234,7 +234,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -259,7 +259,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -284,7 +284,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -309,7 +309,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -334,7 +334,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -359,7 +359,7 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
@@ -384,44 +384,62 @@ function vodka() {
         divCardBody.append(newH3);
         divCard.append(divCardBody);
         resultsLi.append(divCard);
-        $(".uk-slider-items").append(resultsLi);
+        $("#cocktails").append(resultsLi);
       }
     });
   }
 
-
+function clear(){
+ $("#cocktails").empty();
+}
 
 
 $(document).on("click", "#searchBtnEnd", function(){
-    if($("searchBtnEnd").val() === "Whiskey"){
+    if($(this).text() === "Whiskey"){
+        // console.log(this)
+        clear();
         whiskey();
-    } else if($("searchBtnEnd").val() === "Spiced Rum") {
+    } else if($(this).text() === "Spiced Rum") {
         spicedRum();
-    } else if($("searchBtnEnd").val() === "Vodka"){
+    } else if($(this).text() === "Vodka"){
+        console.log($(this).text());
+        clear();
         vodka();
-    } else if($("searchBtnEnd").val() === "Tequila"){
+    } else if($(this).text() === "Tequila"){
+        clear();
         tequila();
-    } else if($("searchBtnEnd").val() === "Scotch"){
+    } else if($(this).text() === "Scotch"){
+        clear();
         scotch();
-    } else if($("searchBtnEnd").val() === "Lager"){
+    } else if($(this).text() === "Lager"){
+        clear();
         lager();
-    } else if($("searchBtnEnd").val() === "Cognac"){
+    } else if($(this).text() === "Cognac"){
+        clear();
         cognac();
-    } else if($("searchBtnEnd").val() === "Cider"){
+    } else if($(this).text() === "Cider"){
+        clear();
         cider();
-    } else if($("searchBtnEnd").val() === "Gin"){
+    } else if($(this).text() === "Gin"){
+        clear();
         gin();
-    } else if($("searchBtnEnd").val() === "Champagne"){
+    } else if($(this).text() === "Champagne"){
+        clear();
         champagne();
-    } else if($("searchBtnEnd").val() === "Ale"){
+    } else if($(this).text() === "Ale"){
+        clear();
         ale();
-    } else if($("searchBtnEnd").val() === "Irish Whiskey"){
+    } else if($(this).text() === "Irish Whiskey"){
+        clear();
         irishW();
-    } else if($("searchBtnEnd").val() === "Bourbon"){
+    } else if($(this).text() === "Bourbon"){
+        clear();
         bourbon();
-    } else if($("searchBtnEnd").val() === "Dry Vermouth"){
+    } else if($(this).text() === "Dry Vermouth"){
+        clear();
         dryV();
-    } else if($("searchBtnEnd").val() === "Sweet Vermouth"){
+    } else if($(this).val() === "Sweet Vermouth"){
+        clear();
         sweetV();
     }
   })
