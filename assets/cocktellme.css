@@ -25,7 +25,8 @@ header{
 }
 .apptext{
 font-size:18px;
-margin-left: 10px;;
+margin-left: 40px;
+margin-right: 40px;
 }
 .form , .apptext{
 margin-top:10px;
@@ -51,4 +52,8 @@ h2{
 .uk-card-body{
     height: 120px;
 }
-
+.text1, .text2{
+    
+    margin-left: 60px;
+    margin-right: 60px;
+}
