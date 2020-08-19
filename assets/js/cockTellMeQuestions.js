@@ -31,21 +31,29 @@ if (lastTest) {
 }
 function renderQuiz(testID) {
     assessment = Traitify.ui.component();
-    console.log(testID)
     assessment.assessmentID(testID);
     assessment.target(".traitify");
     assessment.render()
     assessment.on("Results.Initialized", function () {
-        console.log("Results.Initialized");
         $("#resultsBtn").removeClass("uk-hidden").css({
             "margin-left": "1132px",
             "background": "red",
             "font-weight": "1000px"
         });
+        localStorage.setItem("Check", true);
     });
 }
 
-
+function checkIfComplete() {
+    if (localStorage.getItem("Check")) {
+        $("#resultsBtn").removeClass("uk-hidden").css({
+            "margin-left": "1132px",
+            "background": "red",
+            "font-weight": "1000px"
+        });
+    }
+}
+checkIfComplete();
 $("#resultsBtn").on('click', function () {
     window.location = "./results.html";
 })
