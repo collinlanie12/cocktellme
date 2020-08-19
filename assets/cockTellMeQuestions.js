@@ -11,7 +11,7 @@ $('#questionBtn').on("click", function () {
 
 var lastTest = localStorage.getItem("Test_ID");
 if (lastTest) {
-    renderQuiz("ddb69c62-70bc-4406-af2f-aeb47f329ea5");
+    renderQuiz(lastTest);
 } else {
     $.ajax({
         url: queryURL,
