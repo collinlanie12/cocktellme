@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
-// cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?g=Alcholic"
-=======
 cocktailURL = "https://www.thecocktaildb.com/api/json/v2/9973533/popular.php"
 
 var drinkWhiskey = "Whiskey";
@@ -12,7 +8,6 @@ var drinkScotch = "Scotch";
 var drinkLager = "Lager";
 var drinkCognac = "Cognac";
 
->>>>>>> a2a38a9088419ecd4254d2aab35b6642e1aff318
 $.ajax({
 
   url: cocktailURL,
@@ -61,11 +56,6 @@ $('#submit').on('click', function () {
   } else {
     window.location = './newuser.html';
   }
-})
-
-
-$(document).on("click", "#searchBtnEnd", function(){
-  console.log("hey");
 })
 
 function vodka() {
