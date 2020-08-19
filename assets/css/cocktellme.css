@@ -5,13 +5,13 @@ body{
     font-family: 'Overpass', sans-serif;
 }
 .background-image{
-    background: url(../assets/concrete-texture.png); 
+    background: url(../images/concrete-texture.png); 
    height: 100vh;
 }
 
 h1{
     font-family: 'Fjalla One', sans-serif;
-    /* background: url(../assets/concrete-texture.png); */
+    /* background: url(../assets/images/concrete-texture.png); */
     background:  #B0BEC5;
     
     color:white;
@@ -25,7 +25,8 @@ header{
 }
 .apptext{
 font-size:18px;
-margin-left: 10px;;
+margin-left: 40px;
+margin-right: 40px;
 }
 .form , .apptext{
 margin-top:10px;
@@ -49,5 +50,10 @@ h2{
     width: 200px;
 }
 .uk-card-body{
-    height: 130px;
+    height: 120px;
+}
+.text1, .text2{
+    
+    margin-left: 60px;
+    margin-right: 60px;
 }

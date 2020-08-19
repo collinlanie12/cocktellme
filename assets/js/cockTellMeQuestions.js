@@ -40,10 +40,20 @@ function renderQuiz(testID) {
             "background": "red",
             "font-weight": "1000px"
         });
+        localStorage.setItem("Check", true);
     });
 }
 
-
+function checkIfComplete() {
+    if (localStorage.getItem("Check")) {
+        $("#resultsBtn").removeClass("uk-hidden").css({
+            "margin-left": "1132px",
+            "background": "red",
+            "font-weight": "1000px"
+        });
+    }
+}
+checkIfComplete();
 $("#resultsBtn").on('click', function () {
     window.location = "./results.html";
 })

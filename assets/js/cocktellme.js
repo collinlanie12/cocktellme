@@ -57,13 +57,6 @@ $('#submit').on('click', function () {
   }
 });
 
-function resultBtn() {
-  $("#resultsBtn").removeClass("uk-hidden").css({
-    "margin-left": "1132px",
-    "background": "red",
-    "font-weight": "1000px"
-  })
-}
 
 function vodka() {
   var cocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drinkVod;

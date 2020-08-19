@@ -369,6 +369,7 @@ $(document).on("click", "#searchBtnEnd", function () {
     clear();
     whiskey();
   } else if ($(this).text() === "Spiced Rum") {
+    clear();
     spicedRum();
   } else if ($(this).text() === "Vodka") {
     clear();
