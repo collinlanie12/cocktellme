@@ -3,6 +3,7 @@ var queryURL = "https://api.traitify.com/v1/assessments";
 Traitify.setHost("https://api.traitify.com");
 Traitify.setPublicKey("00ab5e14b27740a08449fdf7ca441885");
 
+
 $('#questionBtn').on("click", function () {
     window.location = './questions.html';
 });
