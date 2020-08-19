@@ -12,7 +12,8 @@ body{
 h1{
     font-family: 'Fjalla One', sans-serif;
     /* background: url(../assets/concrete-texture.png); */
-    background: #B0BEC5;
+    background:  #B0BEC5;
+    
     color:white;
 }
 .uk-button{
