@@ -37,7 +37,7 @@ function renderQuiz(testID) {
     assessment.render()
 }
 
-var queryResults = "https://api.traitify.com/v1/assessments/" + "ddb69c62-70bc-4406-af2f-aeb47f329ea5" + "?data=blend,types,traits,career_matches"
+var queryResults = "https://api.traitify.com/v1/assessments/" + lastTest + "?data=blend,types,traits,career_matches"
 $.ajax({
     url: queryResults,
     beforeSend: function (xhr) {
